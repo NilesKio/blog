@@ -1,14 +1,13 @@
-#!/usr/bin/env sh
 
-set -e
 
-npm run build
+cd ..
+cd vuepress
 
-cd .vuepress/dist
+yarn build
 
 git init
 git add -A
-git commit -m 'deploy'
+git commit -m 'update'
 
 git push -f git@github.com:NilesKio/blog.git master:gh-pages
 
